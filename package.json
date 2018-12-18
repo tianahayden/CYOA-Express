@@ -1,5 +1,5 @@
 {
-  "name": "CYOA Express",
+  "name": "cyoaexpress",
   "version": "1.0.0",
   "description": "CYOA on Express Server",
   "main": "src/index",
