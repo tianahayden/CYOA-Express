@@ -5,8 +5,8 @@
   "main": "src/index",
   "scripts": {
     "start": "node server",
-    "build": "webpack --watch",
-    "sass": "sass src/css/style.scss public/style.css --watch"
+    "build": "webpack",
+    "sass": "sass src/css/style.scss public/style.css"
   },
   "author": "",
   "license": "ISC",
