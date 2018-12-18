@@ -1,0 +1,30 @@
+[
+    {
+      "id": 1,
+      "text": "You see a dragon. What do you do?",
+      "choices": [
+        {
+          "next": 2,
+          "text": "Run away"
+        },
+        {
+          "next": 3,
+          "text": "Fight"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "You decide to run away. But you feel bad for being a coward. What now?",
+      "choices": [
+        {
+          "next": 3,
+          "text": "Turn back and fight"
+        },
+        {
+            "next": 4,
+            "text": "Keep running away. You will deal with your feeling of inadequacy later in therapy"
+        }
+      ]
+    }
+  ]
