@@ -50,10 +50,3 @@ class Page extends Component {
 }
 
 export default Page;
-
-
-// One component that renders the object 
-// with the right IDs,
-// have it push each page to a history 
-// show first element in history array, 
-// add back arrow and pop off element in array
