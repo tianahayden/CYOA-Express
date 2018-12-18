@@ -18,19 +18,24 @@ class Page extends Component {
     if (pageInfo) {
       return (
         <div className='container'>
-          <h1>Story</h1>
-          <div>{pageInfo.text}</div>
-          <button value={pageInfo.choices[0].next} onClick={this.getStoryDetails}>{pageInfo.choices[0].text}</button>
-          <button value={pageInfo.choices[1].next} onClick={this.getStoryDetails}>{pageInfo.choices[1].text}</button>
+          <div className='story-wrapper'>
+            <div className='story-text'>{pageInfo.text}</div>
+            <div className='story-choices'>
+              <button value={pageInfo.choices[0].next} onClick={this.getStoryDetails}>{pageInfo.choices[0].text}</button>
+              <button value={pageInfo.choices[1].next} onClick={this.getStoryDetails}>{pageInfo.choices[1].text}</button>
+            </div>
+          </div>
         </div>
       )
     }
     else {
       return (
         <div className='container'>
-          <h1>Welcome Page</h1>
-          <p>Do you want to play a fun story game?</p>
-          <button value={1} onClick={this.getStoryDetails}>Start</button>
+          <div className='welcome-wrapper'>
+            <h1>Welcome Page</h1>
+            <p>Do you want to play a fun story game?</p>
+            <button value={1} onClick={this.getStoryDetails}>Start</button>
+          </div>
         </div>
       )
     }
