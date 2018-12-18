@@ -4,8 +4,8 @@
   "description": "Node and express server from scratch",
   "main": "src/index",
   "scripts": {
-    "start": "npm run build && node server/index.js",
     "build": "webpack",
+    "start": "npm run build && node server",
     "sass": "sass src/css/style.scss public/style.css"
   },
   "author": "",
