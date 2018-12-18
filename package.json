@@ -4,6 +4,8 @@
   "description": "CYOA on Express Server",
   "main": "src/index",
   "scripts": {
+    "build": "webpack",
+    "start": "npm run build && node server",
     "sass": "sass src/css/style.scss public/style.css"
   },
   "author": "",
