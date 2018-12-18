@@ -1,29 +1,29 @@
 [
     {
       "id": 1,
-      "text": "You see a dragon. What do you do?",
+      "text": "You are walking along the beach when you notice something shiny on the ground a few feet away. As you move closer, you see that it's a green bottle, with jagged edges around the rim. You pick it up and realize there's a message inside the bottle. You are concerned that if you stick your finger inside to fish out the note, the jagged edges will cut you, but you are curious about its continents. What do you do?",
       "choices": [
         {
           "next": 2,
-          "text": "Run away"
+          "text": "Reach inside to try and remove the message"
         },
         {
           "next": 3,
-          "text": "Fight"
+          "text": "Decide not to risk it and put the bottle down"
         }
       ]
     },
     {
       "id": 2,
-      "text": "You decide to run away. But you feel bad for being a coward. What now?",
+      "text": "You carefully stick your finger in to the bottle and are able to slowly pull out the note without injury. You start to unfold the message and you read the following: 'Hidden fortunes are in your future, if you are brave and wise. Find the seagull. She will show you the way.' At that moment, you see a seagull fly over your head, flying southbound. You also notice a sign in the opposite direction called 'Sirene Seagull Motel'. Which direction do you head?",
       "choices": [
         {
           "next": 3,
-          "text": "Turn back and fight"
+          "text": "Southbound towards the flying seagull"
         },
         {
             "next": 4,
-            "text": "Keep running away. You will deal with your feeling of inadequacy later in therapy"
+            "text": "Northbound towards the motel"
         }
       ]
     }

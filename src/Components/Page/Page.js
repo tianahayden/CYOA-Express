@@ -2,20 +2,39 @@ import React, { Component } from 'react';
 import { getStoryDetails } from './actions';
 
 class Page extends Component {
-    constructor(props) {
-        super(props);
-    }
+  constructor(props) {
+    super(props);
+    this.getStoryDetails = this.getStoryDetails.bind(this);
+  }
 
-    componentDidMount() {
-        const { dispatch } = this.props;
-        dispatch(getStoryDetails(1));
-    }
+  getStoryDetails(e) {
+    const { dispatch } = this.props;
+    const num = e.target.value
+    dispatch(getStoryDetails(num));
+  }
 
-    render() {
-        return(
-            <h1>Page yes!</h1>
-        )
+  render() {
+    const { pageInfo } = this.props
+    if (pageInfo) {
+      return (
+        <div className='container'>
+          <h1>Story</h1>
+          <div>{pageInfo.text}</div>
+          <button value={pageInfo.choices[0].next} onClick={this.getStoryDetails}>{pageInfo.choices[0].text}</button>
+          <button value={pageInfo.choices[1].next} onClick={this.getStoryDetails}>{pageInfo.choices[1].text}</button>
+        </div>
+      )
     }
+    else {
+      return (
+        <div className='container'>
+          <h1>Welcome Page</h1>
+          <p>Do you want to play a fun story game?</p>
+          <button value={1} onClick={this.getStoryDetails}>Start</button>
+        </div>
+      )
+    }
+  }
 }
 
 export default Page;
