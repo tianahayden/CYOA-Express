@@ -16,13 +16,20 @@ class Page extends Component {
   render() {
     const { pageInfo } = this.props
     if (pageInfo) {
+      const choice1 = (pageInfo.choices[0] ?
+        <button value={pageInfo.choices[0].next} onClick={this.getStoryDetails}>{pageInfo.choices[0].text}</button>
+        : null)
+      const choice2 = (pageInfo.choices[1] ?
+        <button value={pageInfo.choices[1].next} onClick={this.getStoryDetails}>{pageInfo.choices[1].text}</button>
+        : null)
+
       return (
         <div className='container'>
           <div className='story-wrapper'>
             <div className='story-text'>{pageInfo.text}</div>
             <div className='story-choices'>
-              <button value={pageInfo.choices[0].next} onClick={this.getStoryDetails}>{pageInfo.choices[0].text}</button>
-              <button value={pageInfo.choices[1].next} onClick={this.getStoryDetails}>{pageInfo.choices[1].text}</button>
+              {choice1}
+              {choice2}
             </div>
           </div>
         </div>
